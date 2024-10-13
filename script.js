@@ -1,19 +1,12 @@
+// Show the surprise letter when the button is clicked
 function showSurprise() {
     document.getElementById('surprise').classList.remove('hidden');
-    document.querySelector('button').classList.add('hidden');
 }
 
-// Optional: Add some typing effect to the text
-let i = 0;
-let text = "Happy Birthday to the one who makes my heart skip a beat every single day!";
-let speed = 100;
+// Calculate how long you've been together (Love Timer)
+const startDate = new Date("2023-07-15"); // Your relationship start date
+const today = new Date();
+const diffTime = Math.abs(today - startDate);
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
 
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById('typed-text').innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-window.onload = typeWriter;
+document.getElementById('love-timer').innerHTML = `We've been together for ${diffDays} days!`;
