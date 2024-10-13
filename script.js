@@ -3,6 +3,12 @@ function showSurprise() {
     document.getElementById('surprise').classList.remove('hidden');
 }
 
+// Play the birthday music
+function playMusic() {
+    const music = document.getElementById('birthdayMusic');
+    music.play();
+}
+
 // Calculate how long you've been together (Love Timer)
 const startDate = new Date("2023-07-15"); // Your relationship start date
 const today = new Date();
