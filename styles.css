@@ -1,51 +1,100 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7e7d3;
+    background-color: #ffe6f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    padding: 50px;
+    position: relative;
 }
 
 .container {
-    background-color: #fff;
-    padding: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    width: 50%;
-    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
 }
 
+/* Headings and Text */
 h1 {
     color: #d23669;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .message {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #555;
 }
 
 button {
     background-color: #d23669;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #a91b53;
+    background-color: #a52a4f;
 }
 
+/* Surprise Section */
 .hidden {
     display: none;
 }
 
-#surprise {
+.signature {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    color: #d23669;
+}
+
+/* Timer */
+.timer {
+    font-size: 1.2rem;
+    color: #d23669;
     margin-top: 20px;
 }
 
-.signature {
-    font-style: italic;
-    color: #d23669;
+/* Floating Hearts */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%);
+    animation: float 4s infinite ease-in-out;
+}
+
+.heart:nth-child(2) {
+    left: 20%;
+    animation-duration: 6s;
+}
+
+.heart:nth-child(3) {
+    left: 40%;
+    animation-duration: 5s;
+}
+
+.heart:nth-child(4) {
+    left: 60%;
+    animation-duration: 3.5s;
+}
+
+.heart:nth-child(5) {
+    left: 80%;
+    animation-duration: 4.5s;
 }
