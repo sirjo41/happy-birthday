@@ -5,7 +5,7 @@ function showSurprise() {
 
 // Optional: Add some typing effect to the text
 let i = 0;
-let text = "Happy Birthday to the most wonderful girl in the world. You are my sunshine!";
+let text = "Happy Birthday to the one who makes my heart skip a beat every single day!";
 let speed = 100;
 
 function typeWriter() {
