@@ -41,9 +41,8 @@ button:hover {
     display: none;
 }
 
-#surprise img {
-    width: 200px;
-    margin: 20px 0;
+#surprise {
+    margin-top: 20px;
 }
 
 .signature {
